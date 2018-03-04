@@ -1,0 +1,17 @@
+<p *ngIf="!this.images.count">
+  Loading images...
+</p>
+<div *ngIf="this.images.count">
+  <div *ngFor="let image of images.results">
+    <div class="col-md-4">
+        <div class="thumbnail">
+          <a href="#">
+            <img src={{image.image}} alt="Image" style="width:100%">
+            <div class="caption">
+              <p>{{ image.title }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <h2>Login Form</h2>
+
+  <form action="">
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" value={{email}} (keyup)="onEmailChange($event)" placeholder="Enter email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" value={{password}} (keyup)="onPasswordChange($event)" placeholder="Enter Password" name="psw" required>
+          
+      <button [disabled]='this.loggingIn' (click)="logIn($event)">{{ this.loggingIn ? 'Please wait...':'Login'}}</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
